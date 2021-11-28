@@ -56,7 +56,9 @@ function updateTimeout() {
   timer.setTimeout(timeoutMs);
 }
 function playBtnClick() {
-  ym(86455965,'reachGoal','playBtnClick');
+  if (ym) {
+    ym(86455965,'reachGoal','playBtnClick');
+  }
   if (timer.state === "running") {
     timer.pause();
   } else {
