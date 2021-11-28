@@ -1,10 +1,15 @@
 html {
     height: 100%;
+    font-family: 'Roboto Mono', sans-serif;
 }
 body {
     background-color: #8ECACC;
     position: relative;
     display: block;
+}
+
+input {
+    font-family: 'Roboto Mono', sans-serif;
 }
 
 .timer {
@@ -83,11 +88,22 @@ body {
     border: none !important;
     display: inline;
     font-size: 60px;
-    font-family: Menlo, monospace;
 }
 
 #timer-input:focus {
     border: none;
+}
+
+input[type=time]::-webkit-datetime-edit-ampm-field {
+    display: none;
+}
+
+input[type=time]::-webkit-inner-spin-button,
+input[type=time]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 9px;
 }
 
 @media (max-width: 991px) {
