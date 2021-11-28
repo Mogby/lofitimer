@@ -1,31 +1,39 @@
+html {
+    height: 100%;
+}
+body {
+    background-color: #8ECACC;
+    position: relative;
+    display: block;
+}
+
 .timer {
     max-width: 1440px;
-    margin: 100px auto 0;
-    font-family: monospace;
+    margin: 30vh auto;
+    color: #ffffff;
 }
 
 .timer input[type="time"]::-webkit-calendar-picker-indicator {
     display: none !important;
+    background: none;
 }
 
 .timer input {
     cursor: text;
+    background-color: transparent;
+    color: #ffffff;
 }
 
 .timer input:focus{
     outline: none;
 }
 
-.timer input:disabled{
-    background-color: white;
-    color: black;
-}
-
 .timer input::-webkit-datetime-edit-hour-field:focus,
 .timer input::-webkit-datetime-edit-minute-field:focus,
 .timer input::-webkit-datetime-edit-second-field:focus {
-    background-color: white;
-    color: black;
+    border-radius: 10px;
+    background-color: #487475;
+    color: #ffffff;
     outline: none;
 }
 
@@ -33,34 +41,49 @@
     text-align: center;
     display: flex;
     justify-content: center;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.volume-box {
+    display: flex;
+}
+
+#mute-btn-pic {
+    color: #487475;
+    font-size: 26px;
+    cursor: pointer;
 }
 
 .play-btn {
     display: inline;
-    height: 240px;
-    width: 240px;
-    background-color: yellow;
     text-align: center;
     vertical-align: middle;
     line-height: 240px;
-    font-size: 44pt;
-    font-weight: bold;
     border-radius: 100%;
     cursor: pointer;
 }
 
 #play-btn-pic {
-    height: 120px;
-    width: 120px;
     vertical-align: middle;
-    margin-bottom: 10px;
+    font-size: 160px;
+    margin-bottom: 20px;
+}
+
+.timer-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto 50px;
 }
 
 #timer-input {
     border: none !important;
     display: inline;
     font-size: 60px;
-    margin-right: 50px;
+    font-family: Menlo, monospace;
 }
 
 #timer-input:focus {
@@ -69,7 +92,11 @@
 
 @media (max-width: 991px) {
     .timer {
-        margin: 20px;
+        margin-top: 20vh;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        vertical-align: middle;
     }
     .timer-controls {
         flex-direction: column;
@@ -79,9 +106,8 @@
         margin: 60px auto 0;
     }
 
-    #timer-input {
-        margin-right: 0;
+    .timer-container {
+        margin: 0;
         text-align: center;
     }
 }
-

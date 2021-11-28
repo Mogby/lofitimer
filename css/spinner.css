@@ -7,8 +7,8 @@
 .loader {
     width: 96px;
     height: 96px;
-    border: 10px solid yellow;
-    border-bottom-color: black;
+    border: 10px solid #ffffff;
+    border-bottom-color: #487475;
     border-radius: 50%;
     display: inline-block;
     animation: rotation 1s linear infinite;
